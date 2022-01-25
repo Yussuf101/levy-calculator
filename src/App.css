@@ -1,38 +1,109 @@
-.App {
+body {
+  margin: 0;
+
+  background-color: rgb(20, 105, 161);
+}
+.container {
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: scroll;
+  background: linear-gradient(rgba(10, 98, 170, 0.692), rgb(17, 177, 226));
+}
+
+.nav-links {
+  text-decoration: none;
+  display: flex;
+  position: sticky;
+  width: 90%;
+  justify-content: flex-end;
+  list-style: none;
+  align-items: center;
+  text-align: center;
+}
+.home {
+  display: flex;
+  position: fixed;
+  text-align: center;
+  justify-content: space-between;
+
+  left: 5%;
+  top: 40%;
+  align-items: center;
+}
+.weightss {
+  display: flex;
+  position: relative;
+  height: 80vh;
+  width: 100vw;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.filters {
+  background-color: rgba(255, 255, 255, 0.329);
+  justify-content: center;
+  height: 100%;
+  width: 20%;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+.content {
+  background-color: rgba(255, 255, 255, 0.137);
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  width: 80%;
+  position: relative;
+}
+.weightss > .filters {
+  flex-basis: 1 1 30%;
+}
+.weightss > .contents {
+  flex-basis: 1 1 70%;
+}
+.page-changes {
+  position: relative;
+  background: silver;
+  width: 100%;
+  height: 9vh;
+  align-items: center;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+p {
+  color: black;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.pages-buttons {
   display: flex;
-  flex-direction: column;
+  position: relative;
+  top: 22%;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  text-align: center;
+  width: 75%;
+  text-transform: uppercase;
+  font-size: 20px;
   color: white;
+  font-weight: 700;
 }
+button {
+  border: none;
+  border-radius: 8px;
+  width: 60px;
+  height: 40px;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
 
-.App-link {
-  color: #61dafb;
+  background: linear-gradient(grey, silver);
+  transition: ease 0.5s;
 }
+button:hover {
+  background-color: black;
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  cursor: pointer;
 }
