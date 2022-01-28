@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Prompt:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  left: 10%;
+  top: 15%;
+  bottom: 15%;
+  right: 10%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: none;
+}
+.home-container {
+    padding-top: 10px;
+    padding-left: 45px;
+    padding-right: 45px;
+    box-sizing: border-box;
+    position: relative;
+    text-transform: uppercase;
+    left: 0%;
+    bottom: 0%;
+    font-size: 14px;
+    color: rgb(252, 249, 249);
+    -webkit-text-stroke: rgb(253, 253, 253) 1px;
+    font-family: "Prompt", sans-serif;
+}

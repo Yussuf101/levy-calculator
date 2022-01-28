@@ -8,7 +8,7 @@ function Nav() {
   const [navbar, setNabar] = useState(false);
 
   const changeNavbar = () => {
-    if (window.scrollY >= 10) {
+    if (window.scrollY >= 80) {
       setNabar(true);
     } else {
       setNabar(false);
@@ -37,7 +37,7 @@ function Nav() {
             </li>
             <li className="nav-item">
               <Link className="nav-links" to="/login">
-                LOG IN
+                Login
               </Link>
             </li>{" "}
             <li className="nav-item">
