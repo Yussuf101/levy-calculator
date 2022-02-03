@@ -26,7 +26,7 @@ function Nav() {
           </div>
           <ul className={click ? "nav-menu active" : "nav-menu"}>
             <li className="nav-item">
-              <Link className="nav-links" to="/Home">
+              <Link className="nav-links" to="/">
                 Home
               </Link>
             </li>

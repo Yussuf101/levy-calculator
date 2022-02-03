@@ -16,10 +16,10 @@ function App() {
         <Nav/>
         <div className="container">
         <Routes>
-          <Route path='/Home' element={<Home/>} />
-          <Route path="/LevyCalculator" component={<LevyCalaculator/>}/>
-          <Route path="/Login" component={<Login/>} />
-          <Route path="/Sign-up" component={<SignUp/>} />
+          <Route path='/' element={<Home/>} />
+          <Route path="/LevyCalculator" element={<LevyCalaculator/>}/>
+          <Route path="/Login" element={<Login/>} />
+          <Route path="/SignUp" element={<SignUp/>} />
           </Routes>
         </div>
         <Footer/>
