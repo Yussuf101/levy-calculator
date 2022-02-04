@@ -16,9 +16,15 @@ const LevyCalaculator=()=>{
     // const[novnumber,setNovNumber]= useState(0)
     // const[decnumber,setDecNumber]= useState(0)
 
-    const[potAmount, setPotAmount]=useState(0)
-    const[monthlyAmount, setMonthlyAmount]=useState(0)
-    const janClosingBal = (potAmount+monthlyAmount)-(jannumber*1200)
+    const[potAmount, setPotAmount]=useState('')
+    const[monthlyAmount, setMonthlyAmount]=useState('')
+    const janClosingBal = (Number(potAmount)+Number(monthlyAmount))-(jannumber*1200)
+    const FebClsingBal = (janClosingBal+Number(monthlyAmount))-(jannumber*1200+febnumber*1200)
+    const marClosingBal = (FebClsingBal+Number(monthlyAmount))-(jannumber*1200+febnumber*1200+marnumber*1200)
+
+
+
+    
     
 
  
@@ -28,14 +34,14 @@ const LevyCalaculator=()=>{
         <>
         <div className=" container">
           <div className="pot">
-            <p> How much is currently in your Pot?    <input id="potAmount" placeholder="Enter Amount" onChange={(e)=> setPotAmount(potAmount.e.target.value)}/></p>
+            <p> How much is currently in your Pot?    <input id="potAmount" placeholder="Enter Amount" onChange={(e)=> setPotAmount(e.target.value)}/></p>
             {/* <input id="integer" placeholder="Enter Amount" onChange={(e)=> setPotInput(e.target.value)}/> */}
             <div className="montly">
-              <p> How much is Monthly pay in?   <input  id="MonthlyAmount" placeholder="Enter Amount" onChange={(e)=> setMonthlyAmount(monthlyAmount.e.target.value)}/></p>
+              <p> How much is Monthly pay in?   <input  id="MonthlyAmount" placeholder="Enter Amount" onChange={(e)=> setMonthlyAmount(e.target.value)}/></p>
               
               <br></br>
               <br></br>
-              <table class="table">
+              <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">Months</th>
@@ -64,10 +70,10 @@ const LevyCalaculator=()=>{
                   </tr>
                   <tr>
                     <th scope="row">Starting Balance</th>
-                    <td>{potAmount}</td>
-                    <td>{potAmount}</td>
-                    <td>{potAmount}</td>
-                    <td>{potAmount}</td>
+                    <td>{Number(potAmount)}</td>
+                    <td>{janClosingBal }</td>
+                    <td>{FebClsingBal}</td>
+                    <td>{marClosingBal}</td>
                   </tr>
                   <tr>
                     <th scope="row">Apprentice Cost</th>
@@ -78,17 +84,17 @@ const LevyCalaculator=()=>{
                   </tr>
                   <tr>
                     <th scope="row">Montly Paid In</th>
-                    <td>{monthlyAmount}</td>
-                    <td>{monthlyAmount}</td>
-                    <td>{monthlyAmount}</td>
-                    <td>{monthlyAmount}</td>
+                    <td>{Number(monthlyAmount)}</td>
+                    <td>{Number(monthlyAmount)}</td>
+                    <td>{Number(monthlyAmount)}</td>
+                    <td>{Number(monthlyAmount)}</td>
                   </tr>
                     <tr>
                     <th scope="row">Closing Balance</th>
                     <td>{janClosingBal }</td>
-                    <td>{monthlyAmount+50000-(jannumber+febnumber)*1200}</td>
-                    <td>{monthlyAmount+50000-(jannumber+febnumber+marnumber)*1200}</td>
-                    <td>{monthlyAmount+50000-(jannumber+febnumber+marnumber)*1200}</td>
+                    <td>{FebClsingBal}</td>
+                    <td>{marClosingBal}</td>
+                    <td>{marClosingBal}</td>
                   </tr>
                 </tbody>
               </table>
