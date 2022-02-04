@@ -23,19 +23,11 @@ const LevyCalaculator=()=>{
     const marClosingBal = (FebClsingBal+Number(monthlyAmount))-(jannumber*1200+febnumber*1200+marnumber*1200)
 
 
-
-    
-    
-
- 
-
-
     return (
         <>
         <div className=" container">
           <div className="pot">
             <p> How much is currently in your Pot?    <input id="potAmount" placeholder="Enter Amount" onChange={(e)=> setPotAmount(e.target.value)}/></p>
-            {/* <input id="integer" placeholder="Enter Amount" onChange={(e)=> setPotInput(e.target.value)}/> */}
             <div className="montly">
               <p> How much is Monthly pay in?   <input  id="MonthlyAmount" placeholder="Enter Amount" onChange={(e)=> setMonthlyAmount(e.target.value)}/></p>
               
@@ -45,15 +37,15 @@ const LevyCalaculator=()=>{
                 <thead>
                   <tr>
                     <th scope="col">Months</th>
-                    <th scope="col">Jan
+                    <th scope="col">Month1
                     <button onClick={()=> setJanNumber(jannumber + 1)}>+</button>
                     <button onClick={()=> setJanNumber(jannumber - 1)}>-</button>
                     <button onClick ={()=> setJanNumber(0)}>0</button></th>
-                    <th scope="col">Feb
+                    <th scope="col">Month2
                     <button onClick={()=> setFebNumber(febnumber + 1)}>+</button>
                     <button onClick={()=> setFebNumber(febnumber - 1)}>-</button>
                     <button onClick ={()=> setFebNumber(0)}>0</button></th>
-                    <th scope="col">March
+                    <th scope="col">Month3
                     <button onClick={()=> setMarNumber(marnumber + 1)}>+</button>
                     <button onClick={()=> setMarNumber(marnumber - 1)}>-</button>
                     <button onClick ={()=> setMarNumber(0)}>0</button></th>
