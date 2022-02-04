@@ -3,7 +3,7 @@
 
 .navbar {
   background: linear-gradient(90deg, rgb(28, 27, 27) 0%, rgb(245, 241, 241) 100%);
-  background: rgb(245, 179, 47);
+  background:linear-gradient(135deg, rgb(39, 75, 158) 0%, rgb(35, 122, 184) 100%);
   min-height: 10vh;
   display: flex;
   justify-content: end;
