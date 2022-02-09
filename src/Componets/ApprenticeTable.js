@@ -1,8 +1,7 @@
 import React from "react";
 import{useState} from "react";
-import './LevyCalculator.css';
 
-const LevyCalaculator=()=>{
+const ApprenticeTable=()=>{
     const[jannumber,setJanNumber]= useState(0)
     const[febnumber,setFebNumber]= useState(0)
     const[marnumber,setMarNumber]= useState(0)
@@ -48,94 +47,90 @@ const LevyCalaculator=()=>{
         <>
         <div className=" container">
           <div className="pot">
-            <p> How much is currently in your Pot?    <input className="potAmount" id="potAmount" placeholder="Enter Amount" onChange={(e)=> setPotAmount(e.target.value)}/></p>
             <div className="montly">
-              <p> How much is Monthly pay in?   <input className="MonthlyAmount" id="MonthlyAmount" placeholder="Enter Amount" onChange={(e)=> setMonthlyAmount(e.target.value)}/></p>
               
-              <br></br>
-              <br></br>
               <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">Months</th>
                     <th scope="col">M1
-                    <button className="btns" onClick={()=> setJanNumber(jannumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setJanNumber(jannumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setJanNumber(0)}>0</button></th>
+                    <button onClick={()=> setJanNumber(jannumber + 1)}>+</button>
+                    <button onClick={()=> setJanNumber(jannumber - 1)}>-</button>
+                    <button onClick={()=> setJanNumber(0)}>0</button></th>
                     <th scope="col">M2
-                    <button className="btns" onClick={()=> setFebNumber(febnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setFebNumber(febnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setFebNumber(0)}>0</button></th>
+                    <button onClick={()=> setFebNumber(febnumber + 1)}>+</button>
+                    <button onClick={()=> setFebNumber(febnumber - 1)}>-</button>
+                    <button onClick={()=> setFebNumber(0)}>0</button></th>
                     <th scope="col">M3
-                    <button className="btns" onClick={()=> setMarNumber(marnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setMarNumber(marnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setMarNumber(0)}>0</button></th>
+                    <button onClick={()=> setMarNumber(marnumber + 1)}>+</button>
+                    <button onClick={()=> setMarNumber(marnumber - 1)}>-</button>
+                    <button onClick={()=> setMarNumber(0)}>0</button></th>
                     <th scope="col">M4
-                    <button className="btns" onClick={()=> setAprNumber(aprnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setAprNumber(aprnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setAprNumber(0)}>0</button></th>
+                    <button onClick={()=> setAprNumber(aprnumber + 1)}>+</button>
+                    <button onClick={()=> setAprNumber(aprnumber - 1)}>-</button>
+                    <button onClick={()=> setAprNumber(0)}>0</button></th>
                     <th scope="col">M5
-                    <button className="btns" onClick={()=> setMayNumber(maynumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setMayNumber(maynumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setMayNumber(0)}>0</button></th>
+                    <button onClick={()=> setMayNumber(maynumber + 1)}>+</button>
+                    <button onClick={()=> setMayNumber(maynumber - 1)}>-</button>
+                    <button onClick={()=> setMayNumber(0)}>0</button></th>
                     <th scope="col">M6
-                    <button className="btns" onClick={()=> setJunNumber(junnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setJunNumber(junnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setJunNumber(0)}>0</button></th>
+                    <button onClick={()=> setJunNumber(junnumber + 1)}>+</button>
+                    <button onClick={()=> setJunNumber(junnumber - 1)}>-</button>
+                    <button onClick={()=> setJunNumber(0)}>0</button></th>
                     <th scope="col">M7
-                    <button className="btns" onClick={()=> setJulNumber(julnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setJulNumber(julnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setJulNumber(0)}>0</button></th>
+                    <button onClick={()=> setJulNumber(julnumber + 1)}>+</button>
+                    <button onClick={()=> setJulNumber(julnumber - 1)}>-</button>
+                    <button onClick={()=> setJulNumber(0)}>0</button></th>
                     <th scope="col">M8
-                    <button className="btns" onClick={()=> setAugNumber(augnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setAugNumber(augnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setAugNumber(0)}>0</button></th>
+                    <button onClick={()=> setAugNumber(augnumber + 1)}>+</button>
+                    <button onClick={()=> setAugNumber(augnumber - 1)}>-</button>
+                    <button onClick={()=> setAugNumber(0)}>0</button></th>
                     <th scope="col">M9
-                    <button className="btns" onClick={()=> setSepNumber(sepnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setSepNumber(sepnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setSepNumber(0)}>0</button></th>
+                    <button onClick={()=> setSepNumber(sepnumber + 1)}>+</button>
+                    <button onClick={()=> setSepNumber(sepnumber - 1)}>-</button>
+                    <button onClick={()=> setSepNumber(0)}>0</button></th>
                     <th scope="col">M10
-                    <button className="btns" onClick={()=> setOctNumber(octnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setOctNumber(octnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setOctNumber(0)}>0</button></th>
+                    <button onClick={()=> setOctNumber(octnumber + 1)}>+</button>
+                    <button onClick={()=> setOctNumber(octnumber - 1)}>-</button>
+                    <button onClick={()=> setOctNumber(0)}>0</button></th>
                     <th scope="col">M11
-                    <button className="btns" onClick={()=> setNovNumber(novnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setNovNumber(novnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setNovNumber(0)}>0</button></th>
+                    <button onClick={()=> setNovNumber(novnumber + 1)}>+</button>
+                    <button onClick={()=> setNovNumber(novnumber - 1)}>-</button>
+                    <button onClick={()=> setNovNumber(0)}>0</button></th>
                     <th scope="col">M12
-                    <button className="btns" onClick={()=> setDecNumber(decnumber + 1)}>+</button>
-                    <button className="btns" onClick={()=> setDecNumber(decnumber - 1)}>-</button>
-                    <button className="btns" onClick={()=> setDecNumber(0)}>0</button></th>
+                    <button onClick={()=> setDecNumber(decnumber + 1)}>+</button>
+                    <button onClick={()=> setDecNumber(decnumber - 1)}>-</button>
+                    <button onClick={()=> setDecNumber(0)}>0</button></th>
                     <th scope="col">M13
-                    <button className="btns" onClick={()=> setM13Number(m13number + 1)}>+</button>
-                    <button className="btns" onClick={()=> setM13Number(m13number - 1)}>-</button>
-                    <button className="btns" onClick={()=> setM13Number(0)}>0</button></th>
+                    <button onClick={()=> setM13Number(m13number + 1)}>+</button>
+                    <button onClick={()=> setM13Number(m13number - 1)}>-</button>
+                    <button onClick={()=> setM13Number(0)}>0</button></th>
                     <th scope="col">M14
-                    <button className="btns" onClick={()=> setM14Number(m14number + 1)}>+</button>
-                    <button className="btns" onClick={()=> setM14Number(m14number - 1)}>-</button>
-                    <button className="btns" onClick={()=> setM14Number(0)}>0</button></th>
+                    <button onClick={()=> setM14Number(m14number + 1)}>+</button>
+                    <button onClick={()=> setM14Number(m14number - 1)}>-</button>
+                    <button onClick={()=> setM14Number(0)}>0</button></th>
                     <th scope="col">M15
-                    <button className="btns" onClick={()=> setM15Number(m15number + 1)}>+</button>
-                    <button className="btns" onClick={()=> setM15Number(m15number - 1)}>-</button>
-                    <button className="btns" onClick={()=> setM15Number(0)}>0</button></th>
+                    <button onClick={()=> setM15Number(m15number + 1)}>+</button>
+                    <button onClick={()=> setM15Number(m15number - 1)}>-</button>
+                    <button onClick={()=> setM15Number(0)}>0</button></th>
                     <th scope="col">M16
-                    <button className="btns" onClick={()=> setM16Number(m16number + 1)}>+</button>
-                    <button className="btns" onClick={()=> setM16Number(m16number - 1)}>-</button>
-                    <button className="btns" onClick={()=> setM16Number(0)}>0</button></th>
+                    <button onClick={()=> setM16Number(m16number + 1)}>+</button>
+                    <button onClick={()=> setM16Number(m16number - 1)}>-</button>
+                    <button onClick={()=> setM16Number(0)}>0</button></th>
                     <th scope="col">M17
-                    <button className="btns" onClick={()=> setM17Number(m17number + 1)}>+</button>
-                    <button className="btns" onClick={()=> setM17Number(m17number - 1)}>-</button>
-                    <button className="btns" onClick={()=> setM17Number(0)}>0</button></th>
+                    <button onClick={()=> setM17Number(m17number + 1)}>+</button>
+                    <button onClick={()=> setM17Number(m17number - 1)}>-</button>
+                    <button onClick={()=> setM17Number(0)}>0</button></th>
                     <th scope="col">M18
-                    <button className="btns" onClick={()=> setM18Number(m18number + 1)}>+</button>
-                    <button className="btns" onClick={()=> setM18Number(m18number - 1)}>-</button>
-                    <button className="btns" onClick={()=> setM18Number(0)}>0</button></th>
+                    <button onClick={()=> setM18Number(m18number + 1)}>+</button>
+                    <button onClick={()=> setM18Number(m18number - 1)}>-</button>
+                    <button onClick={()=> setM18Number(0)}>0</button></th>
                     <th scope="col">Total</th>
                   </tr>
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">number of Apprentcies</th>
+                    <th scope="row">Number of Apprentcies</th>
                     <td>{jannumber}</td>
                     <td>{febnumber}</td>
                     <td>{marnumber}</td>
@@ -253,4 +248,4 @@ const LevyCalaculator=()=>{
     )
 }
 
-export default LevyCalaculator;
+export default ApprenticeTable;
