@@ -154,7 +154,7 @@ const LevyCalaculator=()=>{
                     <td>{m16number}</td>
                     <td>{m17number}</td>
                     <td>{m18number}</td>
-                    <td>{junnumber+febnumber+marnumber+aprnumber+marnumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number}</td>
+                    <td>{jannumber+febnumber+marnumber+aprnumber+marnumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number}</td>
                   </tr>
                   <tr>
                     <th scope="row">Starting Balance</th>
