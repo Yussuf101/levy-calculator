@@ -135,7 +135,7 @@ const LevyCalaculator=()=>{
                 </thead>
                 <tbody>
                 <tr>
-                    <th scope="row">number of Apprentcies</th>
+                    <th scope="row">Apprentcies hire</th>
                     <td>{jannumber}</td>
                     <td>{febnumber}</td>
                     <td>{marnumber}</td>
@@ -201,7 +201,7 @@ const LevyCalaculator=()=>{
                     <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200+(marnumber*3600)}</td>
                   </tr>
                   <tr>
-                    <th scope="row">Montly Paid In</th>
+                    <th scope="row">Montly Payments</th>
                     <td>{Number(monthlyAmount)}</td>
                     <td>{Number(monthlyAmount)}</td>
                     <td>{Number(monthlyAmount)}</td>
