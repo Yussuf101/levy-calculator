@@ -224,7 +224,7 @@ const LevyCalaculator=()=>{
                   </tr>
                     <tr>
                     <th scope="row">Closing Balance</th>
-                    <td>{janClosingBal }</td>
+                    <td>{janClosingBal}</td>
                     <td>{FebClosingBal}</td>
                     <td>{marClosingBal}</td>
                     <td>{aprClosingBal}</td>
@@ -232,7 +232,7 @@ const LevyCalaculator=()=>{
                     <td>{junClosingBal}</td>
                     <td>{julClosingBal}</td>
                     <td>{augClosingBal}</td>
-                    <td>{sepClosingBal }</td>
+                    <td>{sepClosingBal}</td>
                     <td>{octClosingBal}</td>
                     <td>{novClosingBal}</td>
                     <td>{decClosingBal}</td>
