@@ -31,7 +31,7 @@ function Home() {
             <p>Additionally, the UK government will then top up this amount by </p>
             <p>10% and place this into your digital account ready for you to invest</p>
             <p>in apprenticeship training. Companies with wage bill less than £3m 
-            </p>annually do not have pay the apprenticeship levy but are still entitled to 95% funding. </p> 
+            </p>annually do not have pay the apprenticeship levy but are still entitled to 95% funding.</p> 
             <p></p>
            </p>
            </ul>
