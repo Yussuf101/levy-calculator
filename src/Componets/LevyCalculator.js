@@ -36,12 +36,13 @@ const LevyCalaculator=()=>{
     const octClosingBal = (sepClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber)*1200)
     const novClosingBal = (octClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber)*1200)
     const decClosingBal = (novClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200)
-    const m13ClosingBal = (decClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200)
-    const m14ClosingBal = (m13ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200)
-    const m15ClosingBal = (m14ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200)
-    const m16ClosingBal = (m15ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m14number+m15number+m15number)*1200)
-    const m17ClosingBal = (m16ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m15number+m16number+m17number)*1200)
-    const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m16number+m17number+m18number)*1200)
+
+    const m13ClosingBal = (decClosingBal+Number(monthlyAmount))-((febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number)*1200)
+    const m14ClosingBal = (m13ClosingBal+Number(monthlyAmount))-((marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number)*1200)
+    const m15ClosingBal = (m14ClosingBal+Number(monthlyAmount))-((aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number)*1200)
+    const m16ClosingBal = (m15ClosingBal+Number(monthlyAmount))-((maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number)*1200+(jannumber*3600))
+    const m17ClosingBal = (m16ClosingBal+Number(monthlyAmount))-((junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number)*1200+(febnumber*3600))
+    const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number)*1200+(marnumber*3600))
 
 
     return (
@@ -176,7 +177,7 @@ const LevyCalaculator=()=>{
                     <td>{m15ClosingBal}</td>
                     <td>{m16ClosingBal}</td>
                     <td>{m17ClosingBal }</td>
-                    <td>{m18ClosingBal}</td>
+                    <td>{m17ClosingBal}</td>
                   </tr>
                   <tr>
                     <th scope="row">Apprentice Cost</th>
@@ -192,13 +193,13 @@ const LevyCalaculator=()=>{
                     <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber)*1200}</td>
                     <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber)*1200}</td>
                     <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200}</td>
-                    <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200}</td>
-                    <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200}</td>
-                    <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200}</td>
-                    <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200+(jannumber*3600)}</td>                   
-                    <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200+(febnumber*3600)}</td>
-                    <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200+(marnumber*3600)}</td>
-                    <td>{(jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber)*1200+(marnumber*3600)}</td>
+                    <td>{(febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number)*1200}</td>
+                    <td>{(marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number)*1200}</td>
+                    <td>{(aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number)*1200}</td>
+                    <td>{(maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number)*1200+(jannumber*3600)}</td>                   
+                    <td>{(junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number)*1200+(febnumber*3600)}</td>
+                    <td>{(julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number)*1200+(marnumber*3600)}</td>
+                    <td>{((((jannumber*1200)*12)+((febnumber*1200)*12)+((marnumber*1200)*12)+((aprnumber*1200)*12)+((maynumber*1200)*12)+((junnumber*1200)*12)+((julnumber*1200)*12)+((augnumber*1200)*11)+((sepnumber*1200)*10)+((octnumber*1200)*9)+((novnumber*1200)*8)+((decnumber*1200)*7)+((m13number*1200)*6)+((m14number*1200)*5)+((m15number*1200)*4)+((m16number*1200)*3)+((m17number*1200)*2)+m18number*1200))+(jannumber*3600)+(febnumber*3600)+(marnumber*3600)}</td>
                   </tr>
                   <tr>
                     <th scope="row">Montly Payments</th>
