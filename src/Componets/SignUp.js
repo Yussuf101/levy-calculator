@@ -1,27 +1,38 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import { Button } from './Button';
+import './SignUp.css';
 
 function SignUp() {
     return (
         <>
-        <div className="signUp-container">
+        <div className="SignUp-container">
         <div className="wrapper">
-            <form className="login-form">
-              <p>Enter your Username</p>
-              <input classname="username" placeholder="Username"></input>
-              <p>Enter your Password</p>
-              <input classname="password" placeholder="password"></input>
-              <Link className="signup-link" to="/Login"><p>To LogIn to your account</p></Link>
-              <div className='hero-btns'>
-                <Button
-                  className='btn'
-                  buttonStyle='btn--outline'
-                  buttonSize='btn--large'>
-              Sign up
-               </Button>
-            </div>            
-           </form>
+          <h1>Register an account</h1>
+              <form action="/register" method="POST">
+                <div>
+                  <label for="Username">Username</label>
+                  <input className="Username" id="Username" placeholder="Enter your username" required></input>
+                </div>
+                <div>
+                  <label for="Email">Email   </label>
+                  <input className="Email" id="Email"  placeholder="Enter your email" required></input>
+                </div>
+                <div>
+                  <label for="Password">Password</label>
+                  <input className="Password" id="Password"  placeholder="Enter your password" required></input>
+                </div>
+                  <div className='hero-btns'>
+                    <Button
+                      className='btn'
+                      buttonStyle='btn--outline'
+                      buttonSize='btn--large'
+                     >
+                      Sign Up
+                     </Button>
+                 </div>
+               </form>
+              <a href="/login">Log In to an existing account</a>
            </div>
           </div>
       </>
