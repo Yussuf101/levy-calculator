@@ -1,0 +1,46 @@
+.SignUp-Container{
+    width: 100vw;
+    height: 100vh;
+    background:#444444;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .Wrapper {
+    width: 25%;
+    padding: 20px;
+    background-color: #444444;
+    width:75%
+  };
+  
+  .h1{
+    font-size: 24px;
+    font-weight: 300;
+  };
+  
+  .register{
+    display: flex;
+    flex-direction: column;
+  };
+ .Username{
+        background-color: #3106f0;
+        flex: 1;
+        min-width: 40%;
+        margin: 10px 0;
+        padding: 2px;
+     };
+  .Email{
+        background-color: #3106f0;
+        flex: 1;
+        min-width: 40%;
+        margin: 10px 0;
+        padding: 2px;
+    }
+  .Username,.Email,.Password{
+      background-color: #3106f0;
+      flex: 1;
+      min-width: 40%;
+      margin: 20px 0;
+      padding: 2px;
+    };
