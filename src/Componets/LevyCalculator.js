@@ -44,6 +44,15 @@ const LevyCalaculator=()=>{
     const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m16number+m17number+m18number)*1200)
 
 
+    const saveFile = () => {
+      saveAs(
+        "/LevyCalculator",
+        "apprentice-levy-calculations.pdf"
+      );
+    };
+  
+
+
     return (
         <>
         <div className=" container">
@@ -154,7 +163,7 @@ const LevyCalaculator=()=>{
                     <td>{m16number}</td>
                     <td>{m17number}</td>
                     <td>{m18number}</td>
-                    <td>{jannumber+febnumber+marnumber+aprnumber+marnumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number}</td>
+                    <td>{jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number}</td>
                   </tr>
                   <tr>
                     <th scope="row">Starting Balance</th>
@@ -246,6 +255,17 @@ const LevyCalaculator=()=>{
                   </tr>
                 </tbody>
               </table>
+              <br></br>
+              
+              <div className='hero-btns'>
+              <Button
+                className='btns'
+                buttonStyle='btn--outline'
+                buttonSize='btn--large'
+                onClick={saveFile}
+                download > Download pdf
+              </Button>
+              </div>
               </div>
               </div>
               </div>
