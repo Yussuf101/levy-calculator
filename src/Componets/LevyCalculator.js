@@ -1,7 +1,11 @@
 import React from "react";
 import{useState} from "react";
 import './LevyCalculator.css';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { Button } from './Button';
+import { saveAs } from "file-saver";
+
+
 
 
 const LevyCalaculator=()=>{
@@ -45,6 +49,15 @@ const LevyCalaculator=()=>{
     const m16ClosingBal = (m15ClosingBal+Number(monthlyAmount))-((maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number)*1200+(jannumber*3600))
     const m17ClosingBal = (m16ClosingBal+Number(monthlyAmount))-((junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number)*1200+(febnumber*3600))
     const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number)*1200+(marnumber*3600))
+
+
+    const saveFile = () => {
+      saveAs(
+        "/LevyCalculator",
+        "apprentice-levy-calculations.pdf"
+      );
+    };
+  
 
 
     return (
@@ -157,7 +170,7 @@ const LevyCalaculator=()=>{
                     <td>{m16number}</td>
                     <td>{m17number}</td>
                     <td>{m18number}</td>
-                    <td>{jannumber+febnumber+marnumber+aprnumber+marnumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number}</td>
+                    <td>{jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m13number+m14number+m15number+m16number+m17number+m18number}</td>
                   </tr>
                   <tr>
                     <th scope="row">Starting Balance</th>
@@ -249,6 +262,17 @@ const LevyCalaculator=()=>{
                   </tr>
                 </tbody>
               </table>
+              <br></br>
+              
+              <div className='hero-btns'>
+              <Button
+                className='btns'
+                buttonStyle='btn--outline'
+                buttonSize='btn--large'
+                onClick={saveFile}
+                download > Download pdf
+              </Button>
+              </div>
               </div>
               </div>
               </div>
