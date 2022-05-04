@@ -19,34 +19,19 @@
   font-weight: 300;
 };
 
-.register{
+.login-Form{
   display: flex;
   flex-direction: column;
 };
-.Username{
-      background-color: #3106f0;
-      flex: 1;
-      min-width: 40%;
-      margin: 10px 0;
-      padding: 2px;
-   };
-.Email{
-      background-color: #3106f0;
-      flex: 1;
-      min-width: 40%;
-      margin: 10px 0;
-      padding: 2px;
-  }
-.Username,.Email,.Password{
-    background-color: #3106f0;
+.username{
+  flex: 1;
+  min-width: 40%;
+  margin: 10px 0;
+  padding: 10px;
+};
+.password{
     flex: 1;
     min-width: 40%;
     margin: 20px 0;
-    padding: 2px;
+    padding: 10px;
   };
-.rig-btn{
-      flex: 1;
-      min-width: 40%;
-      margin: 20px 0;
-      padding: 2px;    
-  }
