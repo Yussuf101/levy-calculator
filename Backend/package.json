@@ -6,9 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
-    "container-start": "docker run --rm --name Mysql1 -dp 3306:3306 -v mysql-data:/var/lib/mysql -v mysql-config:/etc mysql/mysql-server:latest",
-    "container-stop": "docker container stop Mysql1"
-
+    "container-start": "docker run --rm --name Mysql -dp 3306:3306 -v mysql-data:/var/lib/mysql -v mysql-config:/etc mysql/mysql-server:latest",
+    "container-stop": "docker container stop Mysql"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +17,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.18.0",
+    "mysql2": "^2.3.3",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
