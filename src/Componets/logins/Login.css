@@ -19,6 +19,37 @@
   font-weight: 300;
 };
 
+.register{
+  display: flex;
+  flex-direction: column;
+};
+.Username{
+      background-color: #3106f0;
+      flex: 1;
+      min-width: 40%;
+      margin: 10px 0;
+      padding: 2px;
+   };
+.Email{
+      background-color: #3106f0;
+      flex: 1;
+      min-width: 40%;
+      margin: 10px 0;
+      padding: 2px;
+  }
+.Username,.Email,.Password{
+    background-color: #3106f0;
+    flex: 1;
+    min-width: 40%;
+    margin: 20px 0;
+    padding: 2px;
+  };
+.rig-btn{
+      flex: 1;
+      min-width: 40%;
+      margin: 20px 0;
+      padding: 2px;    
+  }
 .login-Form{
   display: flex;
   flex-direction: column;

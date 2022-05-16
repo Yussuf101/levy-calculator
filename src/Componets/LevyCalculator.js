@@ -1,6 +1,11 @@
 import React from "react";
 import{useState} from "react";
 import './LevyCalculator.css';
+// import { Link } from 'react-router-dom';
+import { Button } from './Button';
+import { saveAs } from "file-saver";
+
+
 
 const LevyCalaculator=()=>{
     const[jannumber,setJanNumber]= useState(0)
@@ -42,6 +47,15 @@ const LevyCalaculator=()=>{
     const m16ClosingBal = (m15ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m14number+m15number+m15number)*1200)
     const m17ClosingBal = (m16ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m15number+m16number+m17number)*1200)
     const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m16number+m17number+m18number)*1200)
+
+
+    const saveFile = () => {
+      saveAs(
+        "/LevyCalculator",
+        "apprentice-levy-calculations.pdf"
+      );
+    };
+  
 
 
     const saveFile = () => {
