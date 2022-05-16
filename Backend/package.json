@@ -9,6 +9,8 @@
     "container-start": "docker run --rm --name Mysql1 -dp 3306:3306 -v mysql-data:/var/lib/mysql -v mysql-config:/etc mysql/mysql-server:latest",
     "container-stop": "docker container stop Mysql1"
 
+    "container-start": "docker run --rm --name  -dp 3306:3306 -v mysql-levy-cconfig:/etc -v mysql-levy-data:/var/lib/mysql mysql/mysql-server:latest",
+    "container-stop": "docker container stop Mysql-levy"
   },
   "keywords": [],
   "author": "",
@@ -18,11 +20,20 @@
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "express": "^4.18.0",
+    "daemon": "^1.1.0",
+    "docker": "^1.0.0",
+    "dotenv": "^16.0.0",
+    "express": "^4.18.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "node": "^17.7.2",
+    "nodemon": "^2.0.16",
     "passport": "^0.5.2",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
     "pg": "^8.7.3",
     "pg-hstore": "^2.3.4",
+    "postgres": "^3.1.0",
     "sequelize": "^6.19.0"
   }
 }

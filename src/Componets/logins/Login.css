@@ -50,3 +50,19 @@
       margin: 20px 0;
       padding: 2px;    
   }
+.login-Form{
+  display: flex;
+  flex-direction: column;
+};
+.username{
+  flex: 1;
+  min-width: 40%;
+  margin: 10px 0;
+  padding: 10px;
+};
+.password{
+    flex: 1;
+    min-width: 40%;
+    margin: 20px 0;
+    padding: 10px;
+  };
