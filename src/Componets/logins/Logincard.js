@@ -1,6 +1,5 @@
 import validateInfo from "../Register/ValidateInfor";
 import UseLogin from "./Uselogin";
-import { Button } from "../Button";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
@@ -81,13 +80,13 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
           {errors.password && <p>{errors.password}</p>}
         </div>
 
-        <Button
-          className="register-input-btn login-btn"
+        <button
+          className="btn"
           type="submit"
           onClick={login}
         >
           Login
-        </Button>
+        </button>
       </form>
     </div>
   );

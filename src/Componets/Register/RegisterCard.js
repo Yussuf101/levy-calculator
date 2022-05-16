@@ -1,5 +1,5 @@
 import React from "react";
-import validateInfo from "./ValidateInfor";
+import validate from "./ValidateInfor";
 import UseRegister from "./Registeruse";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
@@ -7,10 +7,10 @@ import useHistory from "react-history-router";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
-const RegisterCard = ({ submitForm }) => {
+const RegisterSignup = ({ submitForm }) => {
   const { handleChange, handleSubmit, values, errors } = UseRegister(
     submitForm,
-    validateInfo
+    validate
   );
 
   const history = useHistory();
@@ -28,19 +28,19 @@ const RegisterCard = ({ submitForm }) => {
         headers: { "Content-Type": "application/json" },
         body: obj,
       });
+      const data = await res.json();
     } catch (error) {
       console.error(error);
     }
   };
   return (
     <div className="register-Content">
-      
+      <div className="wrapper">
       <form onSubmit={handleSubmit} className="form" noValidate>
         <h1 className="register-title">
           Get started with us <span className="register-title-span">today</span>! Create your free{" "}
           <span className="CompanyName">Apprentiship levy calculator account.</span> 
         </h1>
-
         <div className="register-inputs">
             <label className="register-label">Username</label>
             <input
@@ -53,8 +53,6 @@ const RegisterCard = ({ submitForm }) => {
             />
             {errors.username && <p>{errors.username}</p>}
           </div>
-      
-       
           <div className="register-inputs">
             <label className="register-label">Email</label>
             <input
@@ -67,7 +65,6 @@ const RegisterCard = ({ submitForm }) => {
             />
             {errors.email && <p>{errors.email}</p>}
           </div>
-        
           <div className="register-inputs">
             <label className="register-label">Password</label>
             <input
@@ -80,17 +77,16 @@ const RegisterCard = ({ submitForm }) => {
             />
             {errors.password && <p>{errors.password}</p>}
           </div>
-
           <button className="register-input-btn" type="submit" onClick={signup}>
             Sign up
           </button>
           <span className="register-input-login">
             Already have an Account? <Link to="/login" className="register-login-btn">LOGIN HERE </Link>
           </span>
-        
       </form>
+      </div>
     </div>
   );
 };
 
-export default RegisterCard;
+export default RegisterSignup;

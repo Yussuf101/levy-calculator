@@ -1,6 +1,7 @@
 import React from "react";
 import{useState} from "react";
 import './LevyCalculator.css';
+import { Button } from "./Button";
 
 const LevyCalaculator=()=>{
     const[jannumber,setJanNumber]= useState(0)
@@ -44,12 +45,12 @@ const LevyCalaculator=()=>{
     const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m16number+m17number+m18number)*1200)
 
 
-    const saveFile = () => {
-      saveAs(
-        "/LevyCalculator",
-        "apprentice-levy-calculations.pdf"
-      );
-    };
+    // const saveFile = () => {
+    //   saveAs(
+    //     "/LevyCalculator",
+    //     "apprentice-levy-calculations.pdf"
+    //   );
+    // };
   
 
 
@@ -262,7 +263,7 @@ const LevyCalaculator=()=>{
                 className='btns'
                 buttonStyle='btn--outline'
                 buttonSize='btn--large'
-                onClick={saveFile}
+                // onClick={saveFile}
                 download > Download pdf
               </Button>
               </div>

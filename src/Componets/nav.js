@@ -41,7 +41,7 @@ function Nav() {
               </Link>
             </li>{" "}
             <li className="nav-item">
-              <Link className="nav-links" to="/signup">
+              <Link className="nav-links" to="/Signup">
                 Sign up
               </Link>
             </li>

@@ -1,9 +1,10 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
+  padding: 0.05rem;
   font-family: 'PT Sans', sans-serif;
-  color: rgb(248, 248, 246);
+  color: rgb(246, 246, 248);
+  
 }
 body {
   background-color: #444444;
@@ -19,10 +20,10 @@ body {
   font-size: 3rem;
 }
 
-.sign-up {
+/* .sign-up {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: rgb(250, 246, 246);
   font-size: 100px;
-}
+} */
