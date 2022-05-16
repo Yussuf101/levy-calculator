@@ -4,7 +4,7 @@ import Signup from "./Componets/Register/Signup";
 import Home from "./Componets/Home";
 import Login from "./Componets/logins/Login";
 import LevyCalaculator from "./Componets/LevyCalculator";
-import {BrowserRouter, Routes, Route, Redirect} from "react-router-dom";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 import "./App.css";
 import { useState } from "react";
 
