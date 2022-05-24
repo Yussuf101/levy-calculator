@@ -13,7 +13,6 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
             
             try {
               const obj = JSON.stringify({
-                username: values.username,
                 email: values.email,
                 password: values.password
               });
@@ -31,7 +30,6 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
       setAuth({
         ...auth,
         auth_status: data.auth_status,
-        username: data.username,
         email: data.email,
         token: data.secret_token,
       });
@@ -81,6 +79,7 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
           />
           {errors.password && <p>{errors.password}</p>}
         </div>
+
         <button
           className="btn"
           type="submit"

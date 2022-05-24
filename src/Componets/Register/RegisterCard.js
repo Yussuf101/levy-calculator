@@ -18,7 +18,6 @@ const RegisterSignup = ({ submitForm }) => {
   const signup = async (event) => {
     try {
       const obj = JSON.stringify({
-        username:values.username,
         email: values.email,
         password: values.password,
       });
