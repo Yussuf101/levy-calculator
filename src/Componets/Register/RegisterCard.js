@@ -74,7 +74,7 @@ const RegisterSignup = ({ submitForm }) => {
             />
             {errors.password && <p>{errors.password}</p>}
           </div>
-          <button className="register-input-btn" type="submit" onClick={signup}>
+          <button className="btn" type="submit" onClick={signup}>
             Sign up
           </button>
           <span className="register-input-login">

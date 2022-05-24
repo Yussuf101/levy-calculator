@@ -6,9 +6,6 @@ const LoginSuccess = () => {
     return (
       <div>
         <h1>Login Success</h1>
-
-
-        
         <Button
           className="register-input-btn login-btn"
           type="submit"
