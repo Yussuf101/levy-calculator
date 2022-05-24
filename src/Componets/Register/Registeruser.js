@@ -1,7 +1,8 @@
 import { useState, useEffect } from "react";
 
-const useRegister = (callback, validate) => {
+const UserRegister = (callback, validate) => {
   const [values, setValues] = useState({
+    username:"",
     email: "",
     password: "",
   });
@@ -32,4 +33,4 @@ const useRegister = (callback, validate) => {
   return { handleChange, handleSubmit, values, errors };
 };
 
-export default useRegister;
+export default UserRegister;

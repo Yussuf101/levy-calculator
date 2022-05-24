@@ -27,7 +27,7 @@ function App() {
           <Route path='/' element={<Home/>} />
           <Route path="/LevyCalculator" element={<LevyCalaculator/>}/>
           <Route path="/Login" element={<Login auth={auth} setAuth={setAuth} />} />
-          <Route path="/SignUp" exect component ={SignUp}/>
+          <Route path="/SignUp" element={<SignUp auth={auth} setAuth={setAuth} />}/>
           </Routes>
         </div>
         <Footer/>

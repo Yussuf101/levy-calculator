@@ -1,25 +1,25 @@
 import React from "react";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
+import { Button } from "../Button";
 
 const RegisterSuccess = () => {
-  const logoStyle = {
-    color: "blue",
-    textDecoration: "none",
-    fontSize: "80px",
-    marginRight: "200px",
-    display: "flex",
-    justifyContent: "flex-end",
-  };
+  
   return (
     <div className="register-success-content">
-      <Link className="close-btn" style={logoStyle} to="/">
-        ×
-      </Link>
-      <div classname="success-title-container">
-        <h1 className="register-success-title">Welcome to Code Nation Apprentiship levy calculator</h1>
+      <h1>Sign Up Successfull</h1>
+      <div>
+      <Button
+          className="register-input-btn login-btn"
+          type="submit"
+          onClick={<Link to='/LevyCalculator'></Link>}
+        >
+          Go to the Levy Calculator
+        </Button>
+        </div>
+      {/* <div classname="success-title-container">
       </div>
-      <div className="success-img"></div>
+      <div className="success-img"></div> */}
     </div>
   );
 };
