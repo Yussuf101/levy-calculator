@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 
 const useLogin = (callback, validate) => {
   const [values, setValues] = useState({
-    username: "",
     email: "",
     password: "",
   });

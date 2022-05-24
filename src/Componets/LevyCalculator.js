@@ -45,13 +45,21 @@ const LevyCalaculator=()=>{
     const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m16number+m17number+m18number)*1200)
 
 
-
     // const saveFile = () => {
     //   saveAs(
     //     "/LevyCalculator",
     //     "apprentice-levy-calculations.pdf"
     //   );
     // };
+  
+
+
+    const saveFile = () => {
+      saveAs(
+        "/LevyCalculator",
+        "apprentice-levy-calculations.pdf"
+      );
+    };
   
 
 
