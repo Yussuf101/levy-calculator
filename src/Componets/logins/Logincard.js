@@ -1,12 +1,13 @@
-import validateInfo from "../Register/ValidateInfor";
+import validate from "../Register/authenticate";
 import UseLogin from "./Uselogin";
+import { Link } from "react-router-dom";
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 
 const LoginCard = ( { submitForm, auth, setAuth }) => {
         const { handleChange, handleSubmit, values, errors } = UseLogin(
             submitForm,
-            validateInfo
+            validate
           );
       
         const login = async (e) => {
@@ -87,6 +88,9 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
         >
           Login
         </button>
+        <span className="register-input-login">
+            Create an Account <Link to="/login" className="register-login-btn">click Here </Link>
+          </span>
       </form>
     </div>
   );

@@ -34,7 +34,8 @@ function App() {
             )}
             </Route> */}
           <Route path="/Login" element={<Login auth={auth} setAuth={setAuth} />} />
-          <Route path="/signup" exact component={Signup} />
+          <Route path="/SignUp" element={<SignUp auth={auth} setAuth={setAuth} />}/>
+
           </Routes>
         </div>
         <Footer/>

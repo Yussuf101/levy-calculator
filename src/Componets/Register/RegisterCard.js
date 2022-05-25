@@ -1,19 +1,17 @@
 import React from "react";
-import validate from "./ValidateInfor";
-import UseRegister from "./Registeruse";
+import validate from "./authenticate";
+import UserRegister from "./Registeruser";
 import "./SignUp.css";
 import { Link } from "react-router-dom";
-import useHistory from "react-history-router";
 
 const BASE_URL = process.env.REACT_APP_BASE_URL;
 
 const RegisterSignup = ({ submitForm }) => {
-  const { handleChange, handleSubmit, values, errors } = UseRegister(
+  const { handleChange, handleSubmit, values, errors } = UserRegister(
     submitForm,
     validate
   );
 
-  const history = useHistory();
 
   const signup = async (event) => {
     try {
@@ -35,11 +33,9 @@ const RegisterSignup = ({ submitForm }) => {
   };
   return (
     <div className="register-Content">
-      <div className="wrapper">
       <form onSubmit={handleSubmit} className="form" noValidate>
         <h1 className="register-title">
-          Get started with us <span className="register-title-span">today</span>! Create your free{" "}
-          <span className="CompanyName">Apprentiship levy calculator account.</span> 
+          Sign Up
         </h1>
         <div className="register-inputs">
             <label className="register-label">Username</label>
@@ -77,7 +73,7 @@ const RegisterSignup = ({ submitForm }) => {
             />
             {errors.password && <p>{errors.password}</p>}
           </div>
-          <button className="register-input-btn" type="submit" onClick={signup}>
+          <button className="btn" type="submit" onClick={signup}>
             Sign up
           </button>
           <span className="register-input-login">
@@ -85,7 +81,6 @@ const RegisterSignup = ({ submitForm }) => {
           </span>
       </form>
       </div>
-    </div>
   );
 };
 

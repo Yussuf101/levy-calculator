@@ -53,16 +53,6 @@ const LevyCalaculator=()=>{
     // };
   
 
-
-    const saveFile = () => {
-      saveAs(
-        "/LevyCalculator",
-        "apprentice-levy-calculations.pdf"
-      );
-    };
-  
-
-
     return (
         <>
         <div className=" container">

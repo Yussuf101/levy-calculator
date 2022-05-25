@@ -13,7 +13,6 @@ const Signup = () => {
     <>
     <div className="register-Container">
         <div className="form-content-left">
-          <div className="form-img" />
         </div>
         {!isSubmitted ? (
           <RegisterCard submitForm={submitForm} />
