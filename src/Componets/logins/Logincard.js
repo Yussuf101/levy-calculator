@@ -90,7 +90,7 @@ const LoginCard = ( { submitForm, auth, setAuth }) => {
           Login
         </button>
         <span className="register-input-login">
-            Create an Account <Link to="/login" className="register-login-btn">click Here </Link>
+            Create an Account <Link to="/login" className="register-login-btn"> Sign Up Here </Link>
           </span>
       </form>
     </div>

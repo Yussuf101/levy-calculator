@@ -14,6 +14,7 @@ import { useState } from "react";
 function App() {
   const [auth, setAuth] = useState({
     auth_status: false,
+    username:"",
     email: "",
     token: "",
   });
