@@ -3,7 +3,7 @@ import "./SignUp.css";
 import RegisterCard from "./RegisterCard";
 import RegisterSuccess from "./RegisterSuccess";
 
-const SignUp = () => {
+const Signup = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
 
   function submitForm() {
@@ -23,4 +23,4 @@ const SignUp = () => {
     </>
   );
 };
-export default SignUp;
+export default Signup;
