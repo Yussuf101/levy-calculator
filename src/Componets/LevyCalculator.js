@@ -1,7 +1,8 @@
-import React from "react";
+import {React, useRef} from "react";
 import{useState} from "react";
 import './LevyCalculator.css';
 import { Button } from "./Button";
+import { useReactToPrint } from "react-to-print";
 
 const LevyCalaculator=()=>{
     const[jannumber,setJanNumber]= useState(0)
@@ -45,16 +46,16 @@ const LevyCalaculator=()=>{
     const m18ClosingBal = (m17ClosingBal+Number(monthlyAmount))-((jannumber+febnumber+marnumber+aprnumber+maynumber+junnumber+julnumber+augnumber+sepnumber+octnumber+novnumber+decnumber+m16number+m17number+m18number)*1200)
 
 
-    // const saveFile = () => {
-    //   saveAs(
-    //     "/LevyCalculator",
-    //     "apprentice-levy-calculations.pdf"
-    //   );
-    // };
+    const ComponetRef = useRef();
+    const handlePrint = useReactToPrint({
+      content:() => ComponetRef.current,
+    });
   
 
     return (
         <>
+        <div class= "print_section">
+          <div ref={ComponetRef} className="levyCal">
         <div className=" container">
           <div className="pot">
             <p> How much is currently in your Pot?    <input className="potAmount" id="potAmount" placeholder="Enter Amount" onChange={(e)=> setPotAmount(e.target.value)}/></p>
@@ -258,13 +259,15 @@ const LevyCalaculator=()=>{
               <br></br>
               
               <div className='hero-btns'>
-              <Button
-                className='btns'
+              <Button onClick={handlePrint}
+                className='print_button'
                 buttonStyle='btn--outline'
                 buttonSize='btn--large'
                 // onClick={saveFile}
                 download > Download pdf
               </Button>
+              </div>
+              </div>
               </div>
               </div>
               </div>
