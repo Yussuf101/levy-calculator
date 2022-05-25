@@ -6,11 +6,11 @@
     flex-direction: column;
     justify-content:center;
     display: flex;
-    box-shadow: 0 5px 10px 0 rgba(83, 83, 83, 0.315), 0 7px 10px 0 rgb(97, 97, 97);
+    box-shadow: #444444;
     position: relative;
     border-radius: 10px;
     height: 60vh;
-    background-color: rgb(66, 65, 65);
+    background-color: #444444;
     border: rgb(230, 226, 226) 1px solid;
   }
   .wrapper{
@@ -62,8 +62,8 @@
     align-items: center;
     border: rgb(239, 234, 234) 1px solid;
     text-align: center;
-    color: rgb(73, 73, 73);
-    background-color: rgb(46, 45, 45);
+    color: #444444;
+    background-color: #444444;
   }
   
   .register-title {
@@ -99,6 +99,7 @@
   .register-input {
     /* margin-left: 10px; */
     text-align: center;
+    background-color: blue;
   }
   
   .register-input-btn {
@@ -172,7 +173,7 @@
   }
   .btn{
 
-    background-color: #44444444;
+    background-color:blue;
 }
   
   

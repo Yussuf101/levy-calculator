@@ -20,8 +20,6 @@ const App = () => {
           <button onClick={printDocument}>Print</button>
         </div>
         <div id="divToPrint" ref={inputRef}>
-          <div>Note: Here the dimensions of div are same as A4</div>
-          <div><LevyCalaculator/></div>
         </div>
       </div>
     </>
