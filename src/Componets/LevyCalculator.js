@@ -57,6 +57,10 @@ const LevyCalaculator=()=>{
         <div class= "print_section">
           <div ref={ComponetRef} className="levyCal">
         <div className=" container">
+          <div className="cient-salesperson">
+        {/* <p> Sales Person Name?    <input className="sales-person" id="potAmount" placeholder="Enter your name"></input></p>
+        <p> Client Name?    <input className="client" id="client" placeholder="Enter Client Name"></input></p>
+        <p> Name of contact person?    <input className="contact-person" id="contact-person" placeholder="Enter contact person name"></input></p> */}
           <div className="pot">
             <p> How much is currently in your Pot?    <input className="potAmount" id="potAmount" placeholder="Enter Amount" onChange={(e)=> setPotAmount(e.target.value)}/></p>
             <div className="montly">
@@ -263,9 +267,9 @@ const LevyCalaculator=()=>{
                 className='print_button'
                 buttonStyle='btn--outline'
                 buttonSize='btn--large'
-                // onClick={saveFile}
                 download > Download pdf
               </Button>
+              </div>
               </div>
               </div>
               </div>
