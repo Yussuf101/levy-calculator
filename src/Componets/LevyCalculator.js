@@ -61,6 +61,9 @@ const LevyCalaculator=()=>{
         {/* <p> Sales Person Name?    <input className="sales-person" id="potAmount" placeholder="Enter your name"></input></p>
         <p> Client Name?    <input className="client" id="client" placeholder="Enter Client Name"></input></p>
         <p> Name of contact person?    <input className="contact-person" id="contact-person" placeholder="Enter contact person name"></input></p> */}
+        <p><h1>Calculate your company's Apprentish levy here</h1></p>
+        <br></br>
+        <br></br>
           <div className="pot">
             <p> How much is currently in your Pot?    <input className="potAmount" id="potAmount" placeholder="Enter Amount" onChange={(e)=> setPotAmount(e.target.value)}/></p>
             <div className="montly">
