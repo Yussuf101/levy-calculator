@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Yussuf101/levy-calculator/static/css/main.14c6b769.css",
+    "main.js": "/Yussuf101/levy-calculator/static/js/main.aecb8123.js",
+    "static/js/787.cd071ca3.chunk.js": "/Yussuf101/levy-calculator/static/js/787.cd071ca3.chunk.js",
+    "index.html": "/Yussuf101/levy-calculator/index.html",
+    "main.14c6b769.css.map": "/Yussuf101/levy-calculator/static/css/main.14c6b769.css.map",
+    "main.aecb8123.js.map": "/Yussuf101/levy-calculator/static/js/main.aecb8123.js.map",
+    "787.cd071ca3.chunk.js.map": "/Yussuf101/levy-calculator/static/js/787.cd071ca3.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.14c6b769.css",
+    "static/js/main.aecb8123.js"
+  ]
+}
